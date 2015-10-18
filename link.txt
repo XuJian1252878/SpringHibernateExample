@@ -1,0 +1,2 @@
+http://websystique.com/springmvc/spring-4-mvc-and-hibernate4-integration-example-using-annotations/
+http://www.cnblogs.com/leiOOlei/p/3727859.html
