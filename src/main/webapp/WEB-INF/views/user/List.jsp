@@ -22,6 +22,9 @@
 				<td>${user.id }</td>
 				<td>${user.userName }</td>
 				<td>${user.age }</td>
+				<td><a href="show/${user.id }">详细</a></td>
+				<td><a href="edit/${user.id }">编辑</a></td>
+				<td><a href="del/${user.id }">删除</a></td>
 			</tr>
 		</c:forEach>
 	</table>
