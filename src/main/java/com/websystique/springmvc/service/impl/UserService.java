@@ -35,18 +35,18 @@ public class UserService extends BaseService<User> implements IUserService {
 
 	public User findUserById(int id) {
 		// TODO Auto-generated method stub
-		return userDao.getUserById(new Integer(id).toString());
+		return userDao.getUserById(new Integer(id));
 	}
 
 	public boolean delUserById(int id) {
 		// TODO Auto-generated method stub
-		userDao.delete(userDao.getUserById(new Integer(id).toString()));
+		userDao.delete(userDao.getUserById(new Integer(id)));
 		return true;
 	}
 
 	public boolean saveUser(User user) {
 		// TODO Auto-generated method stub
-		userDao.save(user);
+		userDao.update(user);
 		return true;
 	}
 }

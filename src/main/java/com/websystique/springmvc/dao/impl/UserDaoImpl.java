@@ -15,17 +15,17 @@ import com.websystique.springmvc.model.User;
 @Repository("userDao")
 public class UserDaoImpl extends BaseDaoImpl<User> implements IUserDao {
 
-	//让所有的DAO都实现基本的操作接口IBaseDao
-    //除了实现IBaseDao中的基本操作之外，特定的DAO要实现其他操作可以在对应的接口DAO中定义方法，
+	//锟斤拷锟斤拷锟叫碉拷DAO锟斤拷实锟街伙拷锟斤拷锟侥诧拷锟斤拷锟接匡拷IBaseDao
+    //锟斤拷锟斤拷实锟斤拷IBaseDao锟叫的伙拷锟斤拷锟斤拷锟斤拷之锟解，锟截讹拷锟斤拷DAO要实锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟节讹拷应锟侥接匡拷DAO锟叫讹拷锟藉方锟斤拷锟斤拷
 	
 	/**
-	 * 而对于@Resource标签的实现，不需要实现对应的getset方法。
+	 * 锟斤拷锟斤拷锟斤拷@Resource锟斤拷签锟斤拷实锟街ｏ拷锟斤拷锟斤拷要实锟街讹拷应锟斤拷getset锟斤拷锟斤拷锟斤拷
 	@Resource(name="baseDao")
 	private BaseDao<User> baseDao;
 	*/
 	
 /**
- * 使用Autowired实现，必须附加上get和set的方法。
+ * 使锟斤拷Autowired实锟街ｏ拷锟斤拷锟诫附锟斤拷锟斤拷get锟斤拷set锟侥凤拷锟斤拷锟斤拷
  * 	@Autowired
 	private BaseDao<User> baseDao;
 	
@@ -37,7 +37,7 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements IUserDao {
 		this.baseDao = baseDao;
 	}*/
 
-	public User getUserById(String id) {
+	public User getUserById(Integer id) {
 		// TODO Auto-generated method stub
 		return get(User.class, id);
 	}

@@ -41,7 +41,7 @@ public class UserController {
 		return mv;
 	}
 	
-	// Ìø×ªµ½Ìí¼ÓÓÃ»§µÄ½çÃæ¡£
+	// ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ä½ï¿½ï¿½æ¡£
 	@RequestMapping(value="/add",method=RequestMethod.GET)
 	public ModelAndView getAdd(){
 		ModelAndView mv = new ModelAndView();
@@ -49,11 +49,11 @@ public class UserController {
 		return mv;
 	}
 	
-	// ÌîĞ´ÓÃ»§ĞÅÏ¢£¬²¢ÇÒÉÏ´«ÓÃ»§ĞÅÏ¢¡£@ModelAttribute ÊÇ±íµ¥Ìá½»ÉÏÀ´µÄÊı¾İÂğ£¿
+	// ï¿½ï¿½Ğ´ï¿½Ã»ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½@ModelAttribute ï¿½Ç±ï¿½ï¿½á½»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public String add(@ModelAttribute("user") User user){
 		userService.createUser(user);
-		// Ò³ÃæÌø×ª
+		// Ò³ï¿½ï¿½ï¿½ï¿½×ª
 		return "redirect:/user/list";
 	}
 	
@@ -69,23 +69,23 @@ public class UserController {
 	@RequestMapping(value="/del/{userid}",method=RequestMethod.GET)
 	public String del(@PathVariable int userid){
 		userService.delUserById(userid);
-		// Ò³ÃæÌø×ª
+		// Ò³ï¿½ï¿½ï¿½ï¿½×ª
 		return "redirect:/user/list";
 	}
 	
-	// ¶ÔÓÃ»§µÄĞÅÏ¢½øĞĞ¸üĞÂ±à¼­¡£
+	// å¯¹ç”¨æˆ·çš„æ•°æ®ä¿¡æ¯è¿›è¡Œç¼–è¾‘ã€‚
 	@RequestMapping(value="/edit/{userid}",method=RequestMethod.GET)
 	public ModelAndView getEdit(@PathVariable int userid, Model model){
 		User user = userService.findUserById(userid);
-		// Ïòmodel±í¸ñÖĞÌí¼ÓÊı¾İ¡£
+		// ï¿½ï¿½modelï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ¡ï¿½
 		model.addAttribute("userAttribute", user);
-		// Ö¸Ã÷ÕâĞ©ÄÚÈİÊÇÔÚÄÄÒ»¸öjspÒ³ÃæÉÏ½øĞĞÏÔÊ¾¡£
+		// Ö¸ï¿½ï¿½ï¿½ï¿½Ğ©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½jspÒ³ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("user/edit");
 		return mv;
 	}
 	
-	// ½«ÓÃ»§µÄÊı¾İ¸üĞÂÖ®ºóÉÏ´«µ½Êı¾İ¿âÖĞ¡£
+	// ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ¸ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½Ï´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ¿ï¿½ï¿½Ğ¡ï¿½
 	@RequestMapping(value="/save/{userid}",method=RequestMethod.POST)
 	public String saveEdit(@ModelAttribute("userAttribute") User user, @PathVariable int userid){
 		userService.saveUser(user);
