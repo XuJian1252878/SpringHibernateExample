@@ -40,4 +40,9 @@
     	<property name="suffix" value=".jsp"></property>
 	</bean>
 	
+	<import resource="classpath:/configs/spring-hibernate.xml"/>
+	<import resource="classpath:/configs/spring-beans.xml"/>
+	
+	<bean name="/test" class="com.websystique.springmvc.controller.TestController"></bean>
+	
 </beans>
