@@ -14,6 +14,8 @@
   	<mysql.connector.version>5.1.31</mysql.connector.version>
   	<aspectj.version>1.7.4</aspectj.version>
   	<junit.version>3.8.1</junit.version>
+  	<!-- http://blog.csdn.net/testcs_dn/article/details/45583791 -->
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
   <dependencies>
